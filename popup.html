@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style type="text/css">
+    body { 
+        margin: 0px;
+        padding: 0px;
+        overflow:hidden;
+        width: 400px; } 
+    form#dict {
+        padding: 5px;
+        display: flex;
+    }
+    form#dict input {
+        margin: 1px;
+    }
+
+    form#dict input[type="text"] {
+        flex: 1; 
+    }
+
+    #resultFrame {
+        height: 0;
+        width: 100%;
+    }
+    </style>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <form id="dict" name="dict">
+        <input id="searchText" type="text" name="word"/>
+        <input id="translateButton" type="button" value="แปล"/>
+        <input id="closeButton" type="button" value="ปิด"/>
+    </form>
+    <iframe src="about:blank" id="resultFrame" frameBorder="0"></iframe>
+</body>
+</html>
