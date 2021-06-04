@@ -18,7 +18,7 @@
       "128": "icon_128.png"
    },
    "options_page": "options.html",
-   "permissions": [  "http://*/*", "https://*/*","file://*/*",
+   "permissions": [  "https://dict.longdo.com/*",
                      "contextMenus",
                      "tabs",
                      "webRequest",
