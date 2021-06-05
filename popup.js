@@ -19,7 +19,7 @@ function initPage()
 	{
 		document.dict.word.value = searchWord;
     document.body.style.width = '100%';
-		loadResult();
+		loadResult(true);
 	}
 	else
 	{
@@ -46,17 +46,18 @@ function trim(stringToTrim)
 {
 	return stringToTrim.replace(/^\s+|\s+$/g,"");
 }
-function loadResult()
+function loadResult(isWindow)
 {
 	iframe = document.getElementById('resultFrame');
   var resultPage = localStorage["favorite_result"];	
 	if(trim(document.dict.word.value)!="")
 	{
-		iframe.style.height = '560px';
+    document.body.style.height = isWindow ? '100vh' : '600px';
+    iframe.style.height = '560px';
 		iframe.src = 'https://dict.longdo.com/mobile' + (resultPage == 'old' ? '.php' : '/') + '?search='+document.dict.word.value;
     if (resultPage != 'old'){
       document.getElementById('dict').remove();
-      iframe.style.height = '580px';
+      iframe.style.height = '100%';
     }
 	}
 	else
